@@ -1,4 +1,5 @@
 ﻿<Page
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
     x:Class="PrimeFactors.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -10,13 +11,12 @@
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
     	<TextBox HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="12" VerticalAlignment="Top" Width="400" InputScope="Number" AcceptsReturn="True" FontFamily="Gisha" FontSize="64" TextAlignment="Center" Background="#FFFFF300" BorderBrush="#FF818181" TextChanged="UpdateFactors" MaxLength="10" Height="87" FontWeight="Bold"/>
     	<TextBlock HorizontalAlignment="Center" Margin="0,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="64" Foreground="#FFDDDDDD">
-    		<Run Text="Prim"/>
-    		<Run Text="e"/>
+    		<Run Text="Prime"/>
     		<Run Text=" Factors:"/>
     	</TextBlock>
     	<TextBlock x:Name="FactorsVerbose" HorizontalAlignment="Center" Margin="0,180,0,0" TextWrapping="Wrap" Text="2*2*3 " VerticalAlignment="Top" FontSize="64" Foreground="#FF26CF00"/>
     	<TextBlock HorizontalAlignment="Center" Margin="0,240,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Top" FontSize="48" Foreground="#FFDDDDDD"/>
     	<TextBlock x:Name="FactorsShort" HorizontalAlignment="Center" Margin="0,290,0,0" TextWrapping="Wrap" Text="2^2*3 " VerticalAlignment="Top" FontSize="64" Foreground="#FF26CF00"/>
-
+        <UI:AdControl ApplicationId="0132f7a0-7ad9-4766-a670-94646452436a" AdUnitId="10070470" Width="728" Height="90" VerticalAlignment="Bottom"/>
     </Grid>
 </Page>
