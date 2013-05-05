@@ -42,7 +42,7 @@ namespace PrimeFactors
             {
                 number = Int64.Parse(((TextBox)sender).GetValue(TextBox.TextProperty).ToString());
             }
-            catch (FormatException ex)
+            catch (FormatException)
             {
                 return;
             }

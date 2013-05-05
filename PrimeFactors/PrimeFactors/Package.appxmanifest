@@ -15,9 +15,15 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PrimeFactors.App">
-      <VisualElements DisplayName="PrimeFactors" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="PrimeFactors" ForegroundText="light" BackgroundColor="#464646">
+      <VisualElements DisplayName="PrimeFactors" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="This app does fast prime factorization in real-time while you are typing a number." ForegroundText="light" BackgroundColor="#464646">
         <DefaultTile ShowName="allLogos" />
         <SplashScreen Image="Assets\SplashScreen.png" />
+        <InitialRotationPreference>
+          <Rotation Preference="portrait" />
+          <Rotation Preference="landscape" />
+          <Rotation Preference="portraitFlipped" />
+          <Rotation Preference="landscapeFlipped" />
+        </InitialRotationPreference>
       </VisualElements>
     </Application>
   </Applications>
