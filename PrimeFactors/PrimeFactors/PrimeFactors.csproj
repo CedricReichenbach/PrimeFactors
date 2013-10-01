@@ -111,6 +111,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\BindableBase.cs" />
+    <Compile Include="Common\BooleanNegationConverter.cs" />
+    <Compile Include="Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Common\LayoutAwarePage.cs" />
+    <Compile Include="Common\RichTextColumns.cs" />
+    <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -126,7 +132,9 @@
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Common\ReadMe.txt" />
     <None Include="Package.StoreAssociation.xml" />
+    <None Include="packages.config" />
     <None Include="PrimeFactors_StoreKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +150,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Callisto">
+      <HintPath>..\packages\Callisto.1.3.1\lib\winrt45\Callisto.dll</HintPath>
+    </Reference>
+    <Reference Include="WinRTXamlToolkit">
+      <HintPath>..\packages\WinRTXamlToolkit.1.5.2.0\lib\netcore45\WinRTXamlToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

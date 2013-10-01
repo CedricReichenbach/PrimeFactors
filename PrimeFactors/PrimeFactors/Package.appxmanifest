@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="11026BillHill.PrimeFactors" Publisher="CN=4D6452A5-6F5F-4169-AEF6-7F6F4B9211DE" Version="1.0.0.2" />
+  <Identity Name="11026BillHill.PrimeFactors" Publisher="CN=4D6452A5-6F5F-4169-AEF6-7F6F4B9211DE" Version="1.0.0.3" />
   <Properties>
     <DisplayName>PrimeFactors</DisplayName>
     <PublisherDisplayName>Bill Hill</PublisherDisplayName>

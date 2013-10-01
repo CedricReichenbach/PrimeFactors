@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Callisto.Controls;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,6 +7,8 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
+using Windows.UI.ApplicationSettings;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -43,6 +46,8 @@ namespace PrimeFactors
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
+            SettingsPane.GetForCurrentView().CommandsRequested += OnCommandsRequested;  
+
             // App-Initialisierung nicht wiederholen, wenn das Fenster bereits Inhalte enthält.
             // Nur sicherstellen, dass das Fenster aktiv ist.
             if (rootFrame == null)
@@ -72,6 +77,24 @@ namespace PrimeFactors
             // Sicherstellen, dass das aktuelle Fenster aktiv ist
             Window.Current.Activate();
         }
+
+        void OnCommandsRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs args)
+        {
+
+            var about = new SettingsCommand("privacy policy", "Privacy Policy", (handler) =>
+            {
+                var settings = new SettingsFlyout();
+                settings.HeaderText = "Privacy Policy";
+                TextBlock textBlock = new TextBlock();
+                textBlock.Text = "Network connection will only be used for ads, the creator of this app does not store any user-related data.";
+                textBlock.FontSize = 15;
+                textBlock.TextWrapping = TextWrapping.Wrap;
+                settings.Content = textBlock;
+                settings.IsOpen = true;
+            });
+
+            args.Request.ApplicationCommands.Add(about);
+        }  
 
         /// <summary>
         /// Wird aufgerufen, wenn die Ausführung der Anwendung angehalten wird. Der Anwendungszustand wird gespeichert,
