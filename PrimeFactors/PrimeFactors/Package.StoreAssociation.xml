@@ -343,8 +343,14 @@
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
+    <MainPackageIdentityName>11026BillHill.PuristicBinaryClock</MainPackageIdentityName>
     <MainPackageIdentityName>11026BillHill.SimpleMultitouchTester</MainPackageIdentityName>
     <MainPackageIdentityName>11026BillHill.WordShaker</MainPackageIdentityName>
   </AccountPackageIdentityNames>
-  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/9357e82f-42a8-4437-b3c1-851331d66dbc" />
+  <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/9357e82f-42a8-4437-b3c1-851331d66dbc">
+    <PackageInfo>
+      <PackageArchitecture>neutral</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.0.0.0</PackageMaxArchitectureVersion>
+    </PackageInfo>
+  </PackageInfoList>
 </StoreAssociation>
